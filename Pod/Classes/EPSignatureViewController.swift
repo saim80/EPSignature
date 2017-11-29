@@ -100,12 +100,14 @@ open class EPSignatureViewController: UIViewController {
     }
     
     // MARK: - Button Actions
-    
+
+    @IBAction
     func onTouchCancelButton() {
         signatureDelegate?.epSignature!(self, didCancel: NSError(domain: "EPSignatureDomain", code: 1, userInfo: [NSLocalizedDescriptionKey:"User not signed"]))
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction
     func onTouchDoneButton() {
         if let signature = signatureView.getSignatureAsImage() {
             if switchSaveSignature.isOn {
@@ -119,7 +121,8 @@ open class EPSignatureViewController: UIViewController {
             showAlert("You did not sign", andTitle: "Please draw your signature")
         }
     }
-    
+
+    @IBAction
     func onTouchActionButton(_ barButton: UIBarButtonItem) {
         let action = UIAlertController(title: "Action", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
         action.view.tintColor = tintColor
@@ -142,6 +145,7 @@ open class EPSignatureViewController: UIViewController {
         present(action, animated: true, completion: nil)
     }
 
+    @IBAction
     func onTouchClearButton() {
         signatureView.clear()
     }

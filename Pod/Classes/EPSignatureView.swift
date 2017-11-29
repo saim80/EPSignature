@@ -56,7 +56,8 @@ open class EPSignatureView: UIView {
         longPressGesture.minimumPressDuration = 1.5
         self.addGestureRecognizer(longPressGesture)
     }
-    
+
+    @IBAction
     func longPressed(_ gesture: UILongPressGestureRecognizer) {
         let touchPoint = gesture.location(in: self)
         let endAngle: CGFloat = .pi * 2.0
