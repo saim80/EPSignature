@@ -38,15 +38,9 @@ open class EPSignatureViewController: UIViewController {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(EPSignatureViewController.onTouchCancelButton))
-        cancelButton.tintColor = tintColor
-        self.navigationItem.leftBarButtonItem = cancelButton
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(EPSignatureViewController.onTouchDoneButton))
-        doneButton.tintColor = tintColor
         let clearButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.trash, target: self, action: #selector(EPSignatureViewController.onTouchClearButton))
-        clearButton.tintColor = tintColor
         
         if showsDate {
             let dateFormatter = DateFormatter()
