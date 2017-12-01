@@ -5,6 +5,7 @@
 //  Created by Prabaharan Elangovan on 17/01/16.
 //
 //
+#if INTEGRATION_ONLY
 
 import Foundation
 import UIKit
@@ -35,3 +36,5 @@ extension UIColor {
         return UIColor(red: (233/255), green: (159/255), blue: (94/255), alpha: 1.0)
     }
 }
+
+#endif

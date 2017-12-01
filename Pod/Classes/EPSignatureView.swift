@@ -9,7 +9,7 @@
 import UIKit
 
 open class EPSignatureView: UIView {
-
+    #if INTEGRATION_ONLY
     // MARK: - Private Vars
     
     fileprivate var bezierPoints = [CGPoint](repeating: CGPoint(), count: 5)
@@ -176,5 +176,5 @@ open class EPSignatureView: UIView {
             print(error)
         }
     }
-    
+    #endif
 }

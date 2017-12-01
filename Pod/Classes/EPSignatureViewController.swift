@@ -15,7 +15,7 @@ import UIKit
 }
 
 open class EPSignatureViewController: UIViewController {
-
+    #if INTEGRATION_ONLY
     // MARK: - IBOutlets
     
     @IBOutlet weak var switchSaveSignature: UISwitch!
@@ -147,4 +147,5 @@ open class EPSignatureViewController: UIViewController {
     override open func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         signatureView.reposition()
     }
+    #endif
 }
